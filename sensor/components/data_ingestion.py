@@ -41,7 +41,7 @@ class DataIngestion:
 
             logging.info("create dataset into train and test set")
             #split dataset into train and test set
-            train_df,test_df = train_test_split(df,test_size = self.data_ingestion-config.test_size)
+            train_df,test_df = train_test_split(df,test_size = self.data_ingestion_config.test_size)
 
             logging.info("create dataset directory folder if not available")
             #create dataset directory folder if not available
@@ -58,8 +58,7 @@ class DataIngestion:
             data_ingestion_artifact = artifact_entity.DataIngestionArtifact(
                 feature_store_file_path=self.data_ingestion_config.feature_store_file_path,
                 train_file_path=self.data_ingestion_config.train_file_path,
-                test_file_path=self.data_ingestion_config.test_file_path
-            )
+                test_file_path=self.data_ingestion_config.test_file_path)
 
             logging.info(f"Data ingestion artifact: {data_ingestion_artifact}")
             return data_ingestion_artifact
