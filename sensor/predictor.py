@@ -28,7 +28,7 @@ class ModelResolver:
         except Exception as e:
             raise e
 
-    def det_latest_model_path(self):
+    def get_latest_model_path(self):
         try:
             latest_dir = self.get_latest_dir_path()
             if latest_dir is None:
@@ -68,7 +68,7 @@ class ModelResolver:
     def get_latest_save_model_path(self):
         try:
             latest_dir = self.get_latest_save_dir_path()
-            return os.path.join(latest_dir,self.transformer_dir_name, MODEL_FILE_NAME)
+            return os.path.join(latest_dir,self.model_dir_name, MODEL_FILE_NAME)
         except Exception as e:
             raise e
 
