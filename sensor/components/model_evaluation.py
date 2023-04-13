@@ -8,7 +8,7 @@ import pandas as pd
 import sys,os
 from sensor.config import TARGET_COLUMN
 
-class ModelEvaluvation:
+class ModelEvaluation:
 
     def __init__(self,
         model_eval_config:config_entity.ModelEvaluationConfig,
